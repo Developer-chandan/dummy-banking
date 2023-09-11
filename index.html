@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dummy Bank</title>
+    <link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+  rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -12,6 +18,7 @@
         <h1 class="text-5xl text-center mt-4">Functional <span class="text-red-500 font-medium">Baap-Er-Bank</span>!!!</h1>
     </header>
     <main>
+        
         <!-- balance and transaction summary -->
         <section class="mt-8">
             <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
@@ -44,9 +51,62 @@
                 </div>
             </div>
         </section>
+
+        <div id="transection_summery" class=" w-[1120px] container-lg mx-auto">
+           <div class="flex justify-between mt-[5rem]">
+            <h3 class="font-medium text-[gray] text-2xl">Transection Summery</h3>
+            <label for="date">
+                <input type="date" name="" id="">
+            </label>
+           </div>
+           <div class="data_table">
+            <div data-te-datatable-init>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Age</th>
+        <th>Start date</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tiger Nixon</td>
+        <td>System Architect</td>
+        <td>Edinburgh</td>
+        <td>61</td>
+        <td>2011/04/25</td>
+        <td>$320,800</td>
+      </tr>
+     
+   
+    </tbody>
+  </table>
+</div>
+           </div>
+        </div>
     </main>
+    <script>
+        tailwind.config = {
+    darkMode: 'false',
+    theme: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        body: ["Roboto", "sans-serif"],
+        mono: ["ui-monospace", "monospace"],
+      },
+    },
+    corePlugins: {
+      preflight: false,
+    },
+  };
+    </script>
     <script src="js/utilities.js"></script>
     <script src="js/deposit.js"></script>
     <script src="js/withdraw.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </body>
 </html>
